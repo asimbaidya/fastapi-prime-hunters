@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- PICO CSS CDN-->
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@1.*/css/pico.min.css" />
+    <title>Prime Hunters</title>
+    <style>
+      :root {
+        --primary: #ff5d62;
+        --primary-hover: #e82424;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h3>Prime Hunters!</h3>
+
+      {% if msg %}
+      <div style="text-align: center">
+        {% if msg_class == 'warn' %}
+        <p role="button" class="contrast outline" style="color: #ff5d62">{{msg}}</p>
+        {% else %}
+        <p role="button" class="contrast outline" style="color: #98bb6c">{{msg}}</p>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <a href="/" role="button">Back To Prime Hunters</a>
+    </main>
+  </body>
+</html>
